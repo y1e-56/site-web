@@ -1,0 +1,79 @@
+/* Animations spécifiques aux formulaires */
+
+form.card {
+  animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+form.card h2 {
+  animation: fadeIn 0.6s ease 0.3s both;
+}
+
+label {
+  animation: slideInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) calc(0.4s + var(--index, 0s) * 0.1s);
+}
+
+input, select, textarea {
+  animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) calc(0.5s + var(--index, 0s) * 0.1s);
+}
+
+button.primary {
+  animation: fadeIn 0.5s ease 0.6s both;
+  position: relative;
+  overflow: hidden;
+}
+
+button.primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  pointer-events: none;
+}
+
+button.primary:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.alert {
+  animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Table animations */
+table tr {
+  animation: fadeIn 0.6s ease calc(0.2s + var(--row-index, 0) * 0.05s);
+}
+
+th {
+  animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover effects */
+.card:hover {
+  animation: glow 2s ease-in-out;
+}
+
+/* Loading spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade effects */
+.fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-out {
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) reverse;
+}
+
+/* Smooth transitions for state changes */
+.transitioning {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

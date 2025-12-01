@@ -1,0 +1,231 @@
+/* ==========================================
+   TYPOGRAPHIE MODERNE - ONE LIFE
+   ========================================== */
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Paragraph styles */
+p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+p.lead, .hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.3px;
+  max-width: 580px;
+}
+
+p.small {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+p.muted {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+}
+
+/* Label styles */
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: none;
+}
+
+/* Eyebrow / Subtitle */
+.eyebrow, .subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(99, 102, 241, 0.9);
+  margin-bottom: 0.8rem;
+}
+
+/* Caption styles */
+.caption {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+
+/* Button text */
+button, .primary, .secondary {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+/* Link styles */
+a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* List styles */
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+
+/* Special characters and icons */
+.special-char {
+  font-family: 'Segoe UI Symbol', 'Segoe UI', sans-serif;
+  font-weight: normal;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #6366f1 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.gradient-text-secondary {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Text animations */
+.animate-text {
+  animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Text alignment utility */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Text transform utilities */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+/* Font weight utilities */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+
+/* Letter spacing utilities */
+.tracking-tight { letter-spacing: -0.02em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.05em; }
+.tracking-wider { letter-spacing: 0.1em; }
+
+/* Line height utilities */
+.leading-tight { line-height: 1.2; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed { line-height: 1.7; }
+.leading-loose { line-height: 1.9; }
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p.lead, .hero-lead {
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Text truncation */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
