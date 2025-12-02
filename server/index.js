@@ -7,7 +7,7 @@ await connectDb();
 await ensureDefaultAdmin();
 
 if (env.nodeEnv !== 'production') {
-  app.listen(env.port, () => {
+  app.listen(env.port, '0.0.0.0', () => {
     console.log(`🚀 Server ready on port ${env.port}`);
   });
 }
