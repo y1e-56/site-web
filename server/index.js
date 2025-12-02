@@ -6,10 +6,8 @@ import { ensureDefaultAdmin } from './src/services/adminService.js';
 await connectDb();
 await ensureDefaultAdmin();
 
-if (env.nodeEnv !== 'production') {
-  app.listen(env.port, '0.0.0.0', () => {
-    console.log(`🚀 Server ready on port ${env.port}`);
-  });
-}
+app.listen(env.port, '0.0.0.0', () => {
+  console.log(`🚀 Server ready on port ${env.port}`);
+});
 
 export default app;
