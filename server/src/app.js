@@ -18,6 +18,11 @@ const corsOptions = {
       return callback(null, true);
     }
     
+    // Si '*' est dans la liste, accepter tout
+    if (env.allowedOrigins.includes('*')) {
+      return callback(null, true);
+    }
+    
     // Vérifier si l'origine est dans la liste
     if (env.allowedOrigins.includes(origin)) {
       return callback(null, true);
