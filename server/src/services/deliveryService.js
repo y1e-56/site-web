@@ -43,6 +43,11 @@ const renderEmailHtml = (ticket) => `
   <p><strong>Nombre de billets:</strong> ${ticket.quantity}</p>
   <p>Tu peux enregistrer l'image ci-dessous ou l'enregistrer comme pièce jointe.</p>
   <img src="${ticket.qrImage}" alt="QR Ticket" style="max-width:220px;" />
+  <p><strong>Moyens de paiement :</strong></p>
+  <ul>
+    <li>Orange Money : 693727732 (Tchana Kellyan Austin)</li>
+    <li>MTN Mobile Money : 654152787 (Tchana Kellyan Austin)</li>
+  </ul>
   <p>À très vite,<br/>Team ONE Life</p>
 `;
 
@@ -351,5 +356,17 @@ export const deliverTicketById = async (ticketId) => {
   const ticket = await Ticket.findById(ticketId);
   if (!ticket) throw new Error('Ticket introuvable');
   return deliverTicket(ticket);
+};
+
+// Ajout des informations de paiement
+export const paymentMethods = {
+  orangeMoney: {
+    number: '693727732',
+    name: 'Tchana Kellyan Austin'
+  },
+  mtnMobileMoney: {
+    number: '654152787',
+    name: 'Tchana Kellyan Austin'
+  }
 };
 

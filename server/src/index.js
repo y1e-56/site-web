@@ -6,9 +6,9 @@ import { ensureDefaultAdmin } from './services/adminService.js';
 await connectDb();
 await ensureDefaultAdmin();
 
-app.listen(env.port, () => {
-  console.log(`🚀 Server ready on port ${env.port}`);
-});
+  app.listen(env.port, () => {
+    console.log(`🚀 Server ready on port ${env.port}`);
+  });
 
 export default app;
 

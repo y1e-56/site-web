@@ -48,6 +48,19 @@ const addOns = [
   'Aftermovie exclusif envoyé à tous les guests'
 ];
 
+const paymentNumbers = [
+  {
+    method: 'Orange Money',
+    number: '693727732',
+    name: 'Tchana Kellyan Austin'
+  },
+  {
+    method: 'MTN Mobile Money',
+    number: '654152787',
+    name: 'Tchana Kellyan Austin'
+  }
+];
+
 export default function PublicPage() {
   return (
     <section className="page">
@@ -192,6 +205,17 @@ export default function PublicPage() {
           </a>
           <span className="badge-limited">Contrôle à l’entrée par scan unique</span>
         </div>
+      </section>
+
+      <section className="payment-info">
+        <h2>Moyens de paiement</h2>
+        <ul>
+          {paymentNumbers.map((payment, index) => (
+            <li key={index}>
+              <strong>{payment.method} :</strong> {payment.number} ({payment.name})
+            </li>
+          ))}
+        </ul>
       </section>
     </section>
   );

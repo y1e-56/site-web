@@ -14,7 +14,7 @@ const parseOrigins = () => {
 export const env = {
   nodeEnv: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 5000,
-  mongoUri: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/onelife',
+  mongoUri: process.env.MONGODB_URI || 'mongodb+srv://jipnangryan237_db_user:<db_password>@onelifecluster.7oot0wy.mongodb.net/?appName=ONElifecluster',
   jwtSecret: process.env.JWT_SECRET || 'super-secret-dev',
   adminEmail: process.env.ADMIN_EMAIL || 'admin@onelife.local',
   adminPassword: process.env.ADMIN_PASSWORD || 'ChangeMe123!',
